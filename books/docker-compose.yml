@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  backend:
+    container_name: books
+    image: books
+    build: .
+      #dockerfile: match_subject/Dockerfile
+      #args:
+       # buidno: 1
+    ports: 
+      - "8080:8080"
+    
+

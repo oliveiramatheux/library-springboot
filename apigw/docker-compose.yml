@@ -1,0 +1,14 @@
+version: "2"
+
+api-gateway:
+  backend:
+    container_name: api-gateway
+    image: api-gateway
+    build: .
+      #dockerfile: match_subject/Dockerfile
+      #args:
+       # buidno: 1
+    ports: 
+      - "8083:8083"
+    
+

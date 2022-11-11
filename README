@@ -1,0 +1,19 @@
+SUBIR OS MICROSERVICOS NA SEGUINTE ORDEM:
+
+1 - EUREKA - 8761
+2 - BOOKS - 8080, BOOKS USER - 8081
+3 - BOOK STORE - 8082
+4 - AUTH SERVER - 9004
+5 - API GATEWAY - 8083
+
+*** Projeto feito idealmente para o intelliJ. Para executar, so executar o Application de cada pacote
+
+*** TODAS AS REQUISIÇÕES DEVEM PASSAR PELO API GATEWAY APOS AUTENTICAÇÃO VIA JWT. COLOCAR O HEADER AUTHENTICATION MODO BEARER COM O JWT
+
+*** SEMPRE QUE ALGUNS DOS SERVIÇOS FOREM MODIFICADOS E SOFREREM RELOAD, O API GATEWAY DEVE SER REINICIADO PARA OUVIR
+
+http://localhost:8080/swagger-ui/#/
+http://localhost:8081/swagger-ui/#/
+http://localhost:8082/swagger-ui/#/
+http://localhost:9004/swagger-ui/#/
+http://localhost:8083/swagger-ui/#/

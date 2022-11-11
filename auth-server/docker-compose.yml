@@ -1,0 +1,14 @@
+version: "2"
+
+auth-service:
+  backend:
+    container_name: auth-service
+    image: auth-service
+    build: .
+      #dockerfile: match_subject/Dockerfile
+      #args:
+       # buidno: 1
+    ports: 
+      - "9004:9004"
+    
+

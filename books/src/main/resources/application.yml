@@ -1,0 +1,33 @@
+server:
+    port: 8080
+    error:
+        include-message: always
+        include-binding-errors: always
+        include-stacktrace: on_param
+        include_exception: false
+spring:
+    application:
+        name: books
+    datasource:
+        password: W5E@YLJz2fk6
+        url: jdbc:postgresql://localhost:5432/postgres
+        username: admin
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                format_sql: true
+        show-sql: true
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8761/eureka
+        fetch-registry: true
+        register-with-eureka: true
+        enabled: true
+
+jwt:
+    secret: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODIvYXBpL3VzZXIvbG9naW4iLCJleHAiOjE2NjQ0NjQwNTF9.asE0p2tgbeAVFITrXuB35F1sFhmlCi0TWfmNFNExPlg
+    expiration: 8640
