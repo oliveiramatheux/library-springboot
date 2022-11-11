@@ -5,10 +5,5 @@ services:
     container_name: bookStore
     image: bookStore
     build: .
-      #dockerfile: match_subject/Dockerfile
-      #args:
-       # buidno: 1
     ports: 
       - "8082:8082"
-    
-

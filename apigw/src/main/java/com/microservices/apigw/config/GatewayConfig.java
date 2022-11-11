@@ -29,5 +29,4 @@ public class GatewayConfig {
                         .uri("lb://bookuser"))
                 .build();
     }
-
 }

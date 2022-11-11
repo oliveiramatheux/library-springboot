@@ -5,10 +5,6 @@ services:
     container_name: bookUser
     image: bookUser
     build: .
-      #dockerfile: match_subject/Dockerfile
-      #args:
-       # buidno: 1
     ports: 
       - "8081:8081"
     
-

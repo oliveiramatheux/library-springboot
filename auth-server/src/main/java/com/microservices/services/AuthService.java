@@ -17,8 +17,7 @@ public class AuthService {
     private final JwtUtil jwt;
 
     @Autowired
-    public AuthService(RestTemplate restTemplate,
-                       final JwtUtil jwt) {
+    public AuthService(RestTemplate restTemplate, final JwtUtil jwt) {
         this.restTemplate = restTemplate;
         this.jwt = jwt;
     }
@@ -34,23 +33,19 @@ public class AuthService {
         String refreshToken = jwt.generate(userVO, "REFRESH");
 
         return new AuthResponse(accessToken, refreshToken, "Success");
-
     }
 
     public AuthResponse login(AuthLogin authLogin) {
         //do validation if user already exists
-        //authRequest.setPassword(BCrypt.hashpw(authRequest.getPassword(), BCrypt.gensalt(12)));
         UserVO userVO = restTemplate.getForObject("http://bookUser/users/email/"+authLogin.getEmail(), UserVO.class);
 
-
         if(userVO != null && BCrypt.checkpw(authLogin.getPassword(), userVO.getPassword())) {
-
             String accessToken = jwt.generate(userVO, "ACCESS");
             String refreshToken = jwt.generate(userVO, "REFRESH");
 
             return new AuthResponse(accessToken, refreshToken, "Sucess");
         }
+        
         return new AuthResponse(null, null, "Failed to authenticate user");
-
     }
 }

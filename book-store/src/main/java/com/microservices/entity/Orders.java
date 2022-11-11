@@ -5,12 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
+
 @Entity
 @Setter
 @Getter
@@ -21,7 +21,6 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private Long bookId;
     private Long bookUserId;
     private Date date;
@@ -35,7 +34,6 @@ public class Orders {
         this.date = vo.getDate();
         this.price = vo.getPrice();
         this.paymentMethod = vo.getPaymentMethod();
-
         return this;
     }
 }

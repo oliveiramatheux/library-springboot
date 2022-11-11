@@ -5,10 +5,5 @@ eureka-server:
     container_name: eureka-server
     image: eureka-server
     build: .
-      #dockerfile: match_subject/Dockerfile
-      #args:
-       # buidno: 1
     ports: 
       - "8761:8761"
-    
-

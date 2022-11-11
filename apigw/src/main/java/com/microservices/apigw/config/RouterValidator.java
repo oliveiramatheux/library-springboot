@@ -2,7 +2,6 @@ package com.microservices.apigw.config;
 
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -18,5 +17,4 @@ public class RouterValidator {
             request -> openApiEndpoints
                     .stream()
                     .noneMatch(uri -> request.getURI().getPath().contains(uri));
-
 }

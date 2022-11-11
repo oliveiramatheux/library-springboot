@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/auth")
-
 public class AuthController {
 
     private final AuthService authService;
@@ -29,5 +28,4 @@ public class AuthController {
     public ResponseEntity<AuthResponse> login(@RequestBody AuthLogin authLogin) {
         return ResponseEntity.ok(authService.login(authLogin));
     }
-
 }

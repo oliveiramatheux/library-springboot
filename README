@@ -1,10 +1,11 @@
 SUBIR OS MICROSERVICOS NA SEGUINTE ORDEM:
 
 1 - EUREKA - 8761
-2 - BOOKS - 8080, BOOKS USER - 8081
-3 - BOOK STORE - 8082
-4 - AUTH SERVER - 9004
-5 - API GATEWAY - 8083
+2 - BOOKS - 8080,
+3 - BOOKS USER - 8081
+4 - BOOK STORE - 8082
+5 - AUTH SERVER - 9004
+6 - API GATEWAY - 8083
 
 *** Projeto feito idealmente para o intelliJ. Para executar, so executar o Application de cada pacote
 
@@ -15,5 +16,5 @@ SUBIR OS MICROSERVICOS NA SEGUINTE ORDEM:
 http://localhost:8080/swagger-ui/#/
 http://localhost:8081/swagger-ui/#/
 http://localhost:8082/swagger-ui/#/
-http://localhost:9004/swagger-ui/#/
 http://localhost:8083/swagger-ui/#/
+http://localhost:9004/swagger-ui/#/
