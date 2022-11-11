@@ -5,6 +5,6 @@ auth-service:
     container_name: auth-service
     image: auth-service
     build: .
-    ports: 
+    ports:
       - "9004:9004"
-    
+    # network_mode: "host"

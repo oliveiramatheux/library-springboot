@@ -5,5 +5,5 @@ eureka-server:
     container_name: eureka-server
     image: eureka-server
     build: .
-    ports: 
+    ports:
       - "8761:8761"

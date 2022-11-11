@@ -5,6 +5,5 @@ api-gateway:
     container_name: api-gateway
     image: api-gateway
     build: .
-    ports: 
+    ports:
       - "8083:8083"
-    
