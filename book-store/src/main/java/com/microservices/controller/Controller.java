@@ -22,7 +22,7 @@ public class Controller {
         return ResponseEntity.ok(ordersRepository.save(o.convert(oVO)));
     }
 
-    @RequestMapping(value = "/orders/update", method = RequestMethod.POST)
+    @RequestMapping(value = "/orders", method = RequestMethod.PATCH)
     public ResponseEntity<?> updateOrder(@RequestBody OrdersVO oVO) {
         if(oVO.getId() == null){
             return ResponseEntity.badRequest().body("You must provide an ID");
@@ -37,10 +37,10 @@ public class Controller {
     }
 
     @RequestMapping(value = "/orders/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<?> deleteOrder(@RequestParam String id) {
+    public ResponseEntity<?> deleteOrder(@PathVariable String id) {
 
         if(id == null) return ResponseEntity.badRequest().body("You must provide an ID");
-        
+
         Integer intId = Integer.parseInt(id);
         ordersRepository.deleteById(intId.longValue());
         return ResponseEntity.ok("Order deleted");

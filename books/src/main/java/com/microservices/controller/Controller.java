@@ -19,7 +19,7 @@ public class Controller {
         return ResponseEntity.ok(booksRepository.save(b.convert(book)));
     }
 
-    @RequestMapping(value = "/books/update", method = RequestMethod.POST)
+    @RequestMapping(value = "/books", method = RequestMethod.PATCH)
     public ResponseEntity<?> update(@RequestBody BooksVO book) {
         if(book.getId() == null) {
             return ResponseEntity.badRequest().body("You must provide an ID");
@@ -50,9 +50,9 @@ public class Controller {
     public ResponseEntity<?> deleteByBookId(@PathVariable String id) {
 
         if(id == null) return ResponseEntity.badRequest().body("ID is not valid");
-        
+
         Integer bookId = Integer.parseInt(id);
         booksRepository.deleteById(bookId.longValue());
-        return ResponseEntity.ok("Book deleted");  
+        return ResponseEntity.ok("Book deleted");
     }
 }
